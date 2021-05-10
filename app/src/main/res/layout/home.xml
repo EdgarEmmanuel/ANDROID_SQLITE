@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".HomePageActivity"
+    android:padding="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+<!--    start image at the top -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="214dp"
+        android:layout_height="78dp"
+        android:transitionName="image_transition"
+        app:srcCompat="@drawable/sqlite" />
+<!--    end image at the top -->
+
+    <!--    START text at the top -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aclonica"
+        android:textSize="40dp"
+        android:text="SQL LITE" />
+    <!--    END text at the top -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <!--      START customer name input field-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/customer_name"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:padding="10dp"
+                android:hint="Name">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--      END customer name input field-->
+
+        <!--      START customer age input field-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/customer_age"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:padding="10dp"
+                android:inputType="number"
+                android:hint="Age">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+        <!--      END customer age input field-->
+
+        <!--      START switch button -->
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:checked="true"
+            android:id="@+id/switch_button"
+            android:text="Active Customer"
+            />
+        <!--      END switch button -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--          START left button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/viewAll_button"
+                android:layout_width="190dp"
+                android:layout_height="wrap_content"
+                android:onClick="displayAllCustomer"
+                android:text="View All"
+                app:backgroundTint="@color/black">
+
+            </com.google.android.material.button.MaterialButton>
+            <!--          END left button -->
+
+            <!--          START left button -->
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="190dp"
+                android:id="@+id/submit_button"
+                android:text="Submit"
+                android:onClick="insertCustomer"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@color/black">
+
+            </com.google.android.material.button.MaterialButton>
+            <!--          END left button -->
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/list_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>

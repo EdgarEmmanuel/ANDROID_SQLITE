@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/customerRowName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="2dp"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#4d4d4d"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/customerRowAge"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textColor="#4d4d4d"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/customerRowName"
+        app:layout_constraintTop_toBottomOf="@+id/customerRowName" />
+
+    <TextView
+        android:id="@+id/customerRawIsActive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/customerRowAge"
+        android:layout_margin="20dp"
+        android:textColor="#4d4d4d"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/customerRowName"
+        app:layout_constraintStart_toStartOf="@+id/customerRowName"
+        app:layout_constraintTop_toBottomOf="@+id/customerRowAge" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
